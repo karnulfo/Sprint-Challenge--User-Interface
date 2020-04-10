@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	/*border: 0;*/
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -28,8 +28,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+
 body {
-	line-height: 1;
+    line-height: 1;
+
 }
 ol, ul {
 	list-style: none;
@@ -49,6 +52,9 @@ table {
 
 * {
     box-sizing: border-box;
+
+
+
 }
 
 html, body {
@@ -57,7 +63,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
 }
@@ -65,10 +71,42 @@ h1, h2, h3, h4, h5 {
 p {
     line-height: 1.4;
 }
+.imgandnav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 
+
+}
 .container {
-    width: 800px;
+    width: 75%;
     margin: 0 auto;
+}
+.container nav{
+    width: 88.8%;
+    display: flex;
+    flex-wrap: wrap;
+    float:right;   
+     align-items: flex-end;
+
+}
+.container nav a{
+    margin-left: 20px;
+    width: 10%;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 10px;
+    text-decoration: none;
+
+
+
+}
+.container nav img{
+    padding: 1%;
+    margin-left: 10%;
+
+
 }
 
 .top-content {
@@ -77,6 +115,11 @@ p {
     justify-content: space-evenly;
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
+}
+.top-content img{
+    margin: 0 auto;
+    padding: 70px;
+    width: 100%;
 }
 
 .top-content .text-container {
@@ -93,12 +136,51 @@ p {
 .middle-content h2 {
     padding: 0 2%;
     margin-bottom: 0;
+    width: 100%;
 }
 
-.middle-content .boxes {
-    display: flex;
+.middle-content .boxes{
+    width: 100%;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: column;
+    display:flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+
+
+.boxes div{
+    height: 200px;
+    width: 200px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.box1{
+    background-color: teal;
+}.box2{
+    background-color: gold;
+}.box3{
+    background-color: cadetblue;
+}.box4{
+    background-color: coral;
+}.box5{
+    background-color: crimson;
+}.box6{
+    background-color: forestgreen;
+}.box7{
+    background-color: darkorchid;
+}.box8{
+    background-color: hotpink;
+}
+.box9{
+    background-color: indigo;
+}
+.box10{
+    background-color: dodgerblue;
 }
 
 .middle-content .boxes .box {
@@ -127,20 +209,85 @@ p {
 }
 
 footer {
-    width: 100%;
+    margin-right: 300px;
+    width: 80%;
     background: black;
 }
 
 footer nav {
-    width: 60%;
+
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 2%;
+    padding: 20px;
     font-size: 14px;
+    background-color: black;
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+
+@media screen and (max-width: 800px){
+
+    .boxes div{
+        height: 120px;
+        width: 120px;
+        margin:10px
+
+    
+    }
+    .container{
+        width: 90%;
+    }
+
+
+    .container nav{
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        float:right;   
+
+    
+    }
+
+}
+@media screen and (max-width: 500px){
+
+    .container nav{
+        width: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        float:right;   
+
+    
+    }
+    .boxes div{
+        height: 50px;
+        width: 50px;
+        margin:15px
+
+    
+    }
+
+
+.container {
+    width: 90%;
+
+}
+.top-content img{
+    margin: 0 auto;
+    height: 140px;
+    padding: 10px;
+    width: 100%;
+}
+
+
+   .container nav img{
+       width: 10%;
+
+
+
+}
 }
