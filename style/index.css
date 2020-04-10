@@ -52,8 +52,7 @@ table {
 
 * {
     box-sizing: border-box;
-
-
+    text-decoration: none;
 
 }
 
@@ -73,37 +72,30 @@ p {
 }
 .imgandnav{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: space-between;
 
-
+}
+.imgandnav a{
+    display: flex;
+    align-items: flex-end;
+    color: black
 }
 .container {
     width: 75%;
     margin: 0 auto;
 }
-.container nav{
-    width: 88.8%;
+.topnav{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    float:right;   
-     align-items: flex-end;
-
-}
-.container nav a{
-    margin-left: 20px;
-    width: 10%;
-    display:flex;
-    justify-content: space-around;
     flex-direction: row;
-    margin: 10px;
-    text-decoration: none;
-
-
+    justify-content: space-around;
 
 }
+
 .container nav img{
     padding: 1%;
+    margin-top: 10px;
+
     margin-left: 10%;
 
 
@@ -209,23 +201,24 @@ p {
 }
 
 footer {
-    margin-right: 300px;
-    width: 80%;
     background: black;
 }
 
-footer nav {
-
+.footerclass {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    flex-direction: row;
+    width: 100%;
+    justify-content:flex-start;
     font-size: 14px;
     background-color: black;
+    padding: 10px;
 }
 
-footer nav a {
+.footerclass a{
     color: white;
     text-decoration: none;
+    padding: 10px;
+    margin: 10px 60px;
 }
 
 
@@ -255,18 +248,9 @@ footer nav a {
 }
 @media screen and (max-width: 500px){
 
-    .container nav{
-        width: 10%;
-        display: flex;
-        flex-wrap: wrap;
-        float:right;   
 
-    
-    }
     .boxes div{
-        height: 50px;
-        width: 50px;
-        margin:15px
+margin:20px 100px;
 
     
     }
@@ -284,10 +268,68 @@ footer nav a {
 }
 
 
-   .container nav img{
-       width: 10%;
+   .imgandnav img{
+       display: flex;
+       align-items: flex-end;
+
+
+       width: 40%;
+
 
 
 
 }
+.imgandnav{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    
+
+
 }
+.topnav{
+
+    flex-direction: column;
+    align-items: center;
+}
+.topnav a{
+    padding: 5px;
+}
+.topnav a:hover{
+    border: 10px outset gray;
+    background-color: grey;
+
+
+}
+.footerclass {
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    background-color: black;
+    padding: 10px;
+}
+.footerclass a:hover{
+    border: 10px outset grey;
+    background-color: grey;
+
+}
+}
+/*.footerclass {
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    background-color: black;
+    padding: 10px;
+}*/
